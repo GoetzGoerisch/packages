@@ -2,6 +2,7 @@ name: Test and Build
 
 on:
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -26,5 +27,5 @@ jobs:
 
   build:
     name: Feeds Package Test Build
-    needs: formalities
+    #needs: formalities
     uses: openwrt/actions-shared-workflows/.github/workflows/multi-arch-test-build.yml@main
